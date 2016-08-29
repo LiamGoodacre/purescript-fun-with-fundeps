@@ -15,8 +15,8 @@ type S5 n = S (S4 n)
 type S15 n = S5 (S5 (S5 n))
 
 class NatPlus l r o | l r -> o
-instance natAddZ :: NatPlus Z r r
-instance natAddS :: (NatPlus l r o) => NatPlus (S l) r (S o)
+instance natPlusZ :: NatPlus Z r r
+instance natPlusS :: (NatPlus l r o) => NatPlus (S l) r (S o)
 
 class NatMult l r o | l r -> o
 instance natMultZ :: NatMult Z n Z
